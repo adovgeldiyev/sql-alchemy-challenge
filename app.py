@@ -8,7 +8,8 @@ import datetime as dt
 from flask import Flask, jsonify
 
 #Database setup
-engine = create_engine("sqlite:///hawaii.sqlite")
+engine_path="../Resources/hawaii.sqlite"
+engine = create_engine(f"sqlite:///{engine_path}")
 # reflect an existing database into a new model
 Base = automap_base()
 # reflect the tables
